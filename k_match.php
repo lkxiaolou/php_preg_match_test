@@ -119,6 +119,10 @@ $reg11 = '/^(\d{1,3}\.){3}\d{1,3}$/';
 
 //匹配img标签
 $reg12 = '/<img\s[^\>]*\>/';
-print_check_preg($reg12, file_get_contents('http://www.hao123.com'));
+//print_check_preg($reg12, file_get_contents('http://www.hao123.com'));
+
+//匹配出img标签中src
+$reg13 = '/<img\s+[^\>]*(src|SRC)\=(\"|\')([^\"\']+)(\"|\')/';
+//print_check_preg($reg13, file_get_contents('https://www.baidu.com'));
 
 ?>
